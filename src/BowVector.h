@@ -12,6 +12,8 @@
 
 #include <map>
 #include <vector>
+#include <string>
+#include <iostream>
 #include "exports.h"
 #if _WIN32
 #include <cstdint>
@@ -103,10 +105,10 @@ public:
 	 * @param filename
 	 * @param W number of words in the vocabulary
 	 */
-	void saveM(const std::string &filename, size_t W) const;
+	void saveM(const std::string &filename, std::size_t W) const;
 
     //returns a unique number from the configuration
-    uint64_t getSignature()const;
+    std::uint64_t getSignature()const;
     //serialization
     void toStream(std::ostream &str)const;
     void fromStream(std::istream &str);
